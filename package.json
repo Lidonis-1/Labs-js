@@ -1,0 +1,7 @@
+{
+  "name": "js-labs",
+  "packageManager": "yarn@4.9.4",
+  "scripts": {
+    "start": "node src/test_1.js"
+  }
+}

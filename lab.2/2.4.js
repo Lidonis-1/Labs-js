@@ -2,15 +2,20 @@
 
 // Об'єкти
 
-let fn_1 = { name: "smth" }
-const name_1 = fn_1.name;
-name_1 = "new smth";
+const obj_1 = { name: 'smth'}
+let obj_2 = { name: 'smth' }
 
-let fn_2 = { name: "smth" }
-let name_2 = fn_2.name;
-name_2 = "new smth";
+obj_1.name = 'new smth' 
+obj_2.name = 'new smth'
 
-console.dir({ name_1, name_2 });
+console.dir( obj_1.name , obj_2.name, "(result_1)" );
+
+//obj_1 = { name: obj_2.name }
+obj_2 = { name: obj_1.name }
+
+console.dir( obj_1.name, obj_2.name, "(result_2)" );
+
+
 
 
 

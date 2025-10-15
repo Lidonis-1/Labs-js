@@ -26,7 +26,7 @@ console.log(seq(x => x + 1)
 
 
 
-
+   
 const array = () => {
    let list = [];
 

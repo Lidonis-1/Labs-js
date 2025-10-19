@@ -22,20 +22,33 @@ console.log(ex(5));
 
 {
 const pipe = (...funcs) => {
-    let er = '';
+    let er = ['',''] ;
+
     let base = (num)=>{
         return (funcs.toReversed()).reduce((acc, item) => item(acc), num);
     }
+
     try {
         base(5);
     } catch (eror){
-        er = eror ;
-        base = 'und';
-    }
+        er[1] = eror ;
+        base =  'undefined_res';
+    }  
+
     base.on = ()=>{
-        base = er ;
+        er[0] = 'true';
     }
-    return base;
+
+    console.log(er);
+
+    if (er[0] === 'true'){
+        return er[1];
+    }else{
+         return base;
+    }
+    
+
+
 }
     
 const inc = x => ++x;
@@ -46,7 +59,9 @@ const ex = pipe(inc, twice, cube);
 console.log(ex(5));
 
 const ex_2 = pipe(inc, 7,twice);
-console.log(ex_2);
 
 console.log(ex_2.on);
 }
+
+const m_lst = {n_result: 'nclass', result: 'class', n_2result: 'nclass' };
+console.log(m_lst.result)

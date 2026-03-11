@@ -10,10 +10,6 @@ const pipe = (...funcs) => {
     
 }
     
-
-
-
-
 /*
 {
 const pipe = (...funcs) => {

@@ -8,12 +8,6 @@ const random = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-console.log(random( 10));
-
-
-
-
-
 const generateKey = (length)=>{
   const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let result = '';
@@ -23,11 +17,10 @@ const generateKey = (length)=>{
     return result
 }
 
-const key = generateKey(16, characters);
-console.log(key);
 
 
 
+/*
 const Transform = (ip = '127.0.0.1') => {
     const arr_str = ip.split('.');
     const arr_num = arr_str.map((item) => Number(item));
@@ -38,9 +31,6 @@ const Transform = (ip = '127.0.0.1') => {
     return result
 
 }
-
-const num_from_ip = Transform();
-console.log(num_from_ip);
 
 const lst_of_func = {
   m1: x => [x],
@@ -69,5 +59,5 @@ const result_1 = func(lst_of_func);
 for (const [name, length] of result_1) {
   console.log(`${name}: ${length}`);
 }
-
+*/
 export {random, generateKey}

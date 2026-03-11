@@ -12,9 +12,10 @@ console.log(random( 10));
 
 
 
-const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-const generateKey = (length, character)=>{
+
+const generateKey = (length)=>{
+  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     let result = '';
     for (let i = 0; i < length; i++){
         result += character[random(character.length - 1)];
@@ -68,3 +69,5 @@ const result_1 = func(lst_of_func);
 for (const [name, length] of result_1) {
   console.log(`${name}: ${length}`);
 }
+
+export {random, generateKey}

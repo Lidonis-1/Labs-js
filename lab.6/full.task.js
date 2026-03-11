@@ -83,3 +83,6 @@ const ex = pipe(inc, twice, cube);
 console.log(ex(5));
 
 const ex_2 = pipe(inc, 7, cube);
+
+
+export {pipe, compose}

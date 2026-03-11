@@ -36,7 +36,7 @@ console.log(...sm_lst_2);
 Функция difference(array1, array2) должна находить разницу между массивами, т.е. возвращать новый массив, содержащий значения, которые содержались в array1, но не содержались в array2. 
 */
 
-const difference = (ar1, ar2)=> {
+export const difference = (ar1, ar2)=> {
 
     const res = ar1.filter(item=> !ar2.includes(item));
     return res;
@@ -54,4 +54,6 @@ const array1 = ['Beijing', 'Kiev'];
 const array2 = ['Kiev', 'London', 'Baghdad'];
 const result = difference(array1, array2);
 console.log(result);
+
+
 

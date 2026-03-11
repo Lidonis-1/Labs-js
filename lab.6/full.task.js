@@ -1,6 +1,6 @@
 `use strict`
 
-{
+
 const pipe = (...funcs) => {
     if (funcs.some(x => typeof x !== `function`)){
         throw  `there is a parameter which not a function`;
@@ -10,14 +10,9 @@ const pipe = (...funcs) => {
     
 }
     
-const inc = x => ++x;
-const twice = x => x * 2;
-const cube = x => x ** 3;
 
-const ex = pipe(inc, twice, cube);
-console.log(ex(5));
 
-}
+
 
 /*
 {
@@ -75,14 +70,7 @@ const compose = (...fns) => {
   return composed;
 };
 
-const inc = x => ++x;
-const twice = x => x * 2;
-const cube = x => x ** 3;
 
-const ex = pipe(inc, twice, cube);
-console.log(ex(5));
-
-const ex_2 = pipe(inc, 7, cube);
 
 
 export {pipe, compose}
